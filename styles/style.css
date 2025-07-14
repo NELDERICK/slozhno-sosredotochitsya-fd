@@ -295,8 +295,8 @@
   gap: 20px;
 }
 
-.section:first-of-type,
-.section:nth-of-type(3) {
+.content__section .focus,
+.content__section concentrate-better {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -418,11 +418,11 @@
     margin-block-end: 50px;
   }
 
-  .section:nth-of-type(2) .section__title {
+  .content__section .concentrate .section__title {
     width: 100%;
   }
 
-  .section:nth-of-type(2) .section__article-list {
+  .content__section .concentrate .section__article-list {
     justify-content: space-between;
     margin-block-end: 50px;
     gap: 20px;
@@ -431,26 +431,26 @@
     flex-direction: column;
   }
 
-  .section:nth-of-type(2) .section__article-item {
+  .content__section .concentrate .section__article-item {
     flex: 1 0 auto;
     width: 103%;
   }
 
-  .section:first-of-type .section__title,
-  .section:nth-of-type(3) .section__title {
+  .content__section .focus .section__title,
+  .content__section concentrate-better .section__title {
     width: 100%;
     margin-bottom: 20px;
     /*padding: 0px 10px;*/
     max-width: 400px;
   }
 
-  .section:first-of-type .section__article-list,
-  .section:nth-of-type(3) .section__article-list {
+  .content__section .focus .section__article-list,
+  .content__section concentrate-better .section__article-list {
     width: 100%;
     margin-block-end: 50px;
   }
 
-  .section:last-of-type .section__image {
+  .section .img__section .section__image {
     width: 100%;
     height: auto;
   }
@@ -459,7 +459,7 @@
     width: 100px;
   }
 
-  .section:last-of-type {
+  .section .img__section {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -522,20 +522,37 @@
     flex-wrap: wrap;
   }
 
-  .section:first-of-type .section__title,
-  .section:nth-of-type(3) .section__title {
+  .section {
+    padding: 40px 20px;
+  }
+  
+  .section__title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  
+  .section__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Узкий заголовок */
+  .section--narrow-title .section__title {
     max-width: 230px;
   }
-
-  .section:first-of-type .section__article-list,
-  .section:nth-of-type(3) .section__article-list {
-    width: 64%;
+  
+  /* Сетка изображений */
+  .section--image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
   }
-  .section:nth-of-type(2) .section__article-item {
-    flex: 1 0 auto;
-    width: 100%;
+  
+  .section--image-grid .section__image {
+    justify-self: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
-}
 
 /*Футер*/
 
@@ -555,4 +572,5 @@
       margin-block-start: 30px;
     }
   }
+}
 }
